@@ -1,0 +1,49 @@
+* {
+    font-family: Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 100px;
+    color: khaki;
+    text-align: center;
+    background-image: url("images/logo.jpeg");
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+span {
+    font-weight: bold;
+    color: blue;
+}
+
+.product {
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 32px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+#brush_banner {
+    background-color: mediumspringgreen;
+}
+
+#frame_banner {
+    background-color: lightcoral;
+}
+
+#paint_banner {
+    background-color: skyblue;
+}
+
+/*
+This is not part of the code or instructions for this project but merely for future reference...the code below will include all of the border, width, and height calculations into whatever size value you give a CSS element.  For example, if you give an element a height and width of 200px, all of the content, padding and border specs will be included in that value of 200px so that when you are trying to fit different elements together you can get an exact measurement of all the elements so that you can fit them in together precisely.
+
+The default is that when you give an element a value of 200px, 200px will only be the size of the content which will not include any padding or border sizes that you may want to add to the element.
+
+element {
+    box-sizing: border-box;
+}
+*/

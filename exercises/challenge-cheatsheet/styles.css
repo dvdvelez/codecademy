@@ -1,0 +1,40 @@
+h1, h2 {
+    text-align: center;
+}
+
+h2 {
+    color: rgb(10, 50, 200);
+}
+
+table {
+    border: 2px solid rgb(10, 50, 200);
+    border-radius: 5px;
+    background-color: rgb(190, 240, 255);
+    width: 650px;
+    margin: auto;
+}
+
+th {
+    font-size: large;
+    font-weight: bold;
+    background-color: rgb(50, 90, 240 );
+    color: rgb(255, 245, 235);
+    text-align: center;
+    border-radius: 4px;
+}
+
+td {
+    border-top: 1px solid rgb(10, 50, 200);
+}
+
+span {
+    font-family: "Gemunu Libre", sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background-color: rgb(255, 245, 235);
+    border-radius: 4px;
+}
+
+tbody tr td:first-child {
+    text-align: center;
+}

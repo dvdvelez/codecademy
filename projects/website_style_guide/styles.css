@@ -23,11 +23,6 @@ a {
 .colors, .fonts, .texts {
     display: inline-block;
     margin: 10px 20px;
-}
-
-.colors, .fonts, .texts {
-    display: inline-block;
-    margin: 10px 20px;
     padding: 20px 30px;
     width: 400px;
     border: dotted 1px rgb(200, 50, 50);
@@ -63,39 +58,35 @@ a {
     color: black;
 }
 
-#cool_blue:hover, #pink:hover, #mint_green:hover, #beige:hover {
+#cool_blue:hover, #pink:hover, #mint_green:hover, #beige:hover, #cool_blue:active, #pink:active, #mint_green:active, #beige:active {
     text-align: center;
     width: 304px;
     height: 126px;
     padding: 33px 0;
+}
+
+#cool_blue:hover, #pink:hover, #mint_green:hover, #beige:hover {
     border: solid 2px rgb(255, 0, 0);
+    transition-duration: 0.3s;
 }
 
 #cool_blue:hover {
     background-color: rgb(75, 123, 234);
-    transition-duration: 0.3s;
 }
 
 #pink:hover {
     background-color: rgb(247, 117, 255);
-    transition-duration: 0.3s;
 }
 
 #mint_green:hover {
     background-color: rgb(109, 254, 206);
-    transition-duration: 0.3s;
 }
 
 #beige:hover {
     background-color: rgb(255, 247, 232);
-    transition-duration: 0.3s;
 }
 
 #cool_blue:active, #pink:active, #mint_green:active, #beige:active {
-    text-align: center;
-    width: 304px;
-    height: 126px;
-    padding: 33px 0;
     border: solid 2px rgb(255, 255, 0);
     transition-duration: 0s;
 }
@@ -117,4 +108,3 @@ span {
 #poppins_font, #poppins_text {
     font-family: poppins, sans-serif;
 }
-

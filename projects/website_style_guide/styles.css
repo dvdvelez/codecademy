@@ -1,49 +1,72 @@
 * {
-    font-family: Helvetica, sans-serif;
+    border-radius: 5px;
 }
 
-h1 {
-    font-size: 100px;
-    color: khaki;
+body {
+    margin: 50px 100px;
+    min-width: 400px;
+    font-family: "Times New Roman", sans-serif;
+}
+
+.color_guide, .font_guide, .text_guide {
+    border: 2px solid rgb(200, 50, 50);
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    background-color: rgb(255, 247, 247);
+}
+
+.colors, .fonts, .texts {
+    display: inline-block;
+    margin: 10px 20px;
+}
+
+#cool_blue, #pink, #mint_green, #beige {
+    box-sizing: border-box;
     text-align: center;
-    background-image: url("images/logo.jpeg");
-    margin-top: 60px;
-    margin-bottom: 60px;
+    width: 300px;
+    height: 120px;
+    padding: 30px 0;
+    line-height: 30px;
+}
+
+#cool_blue {
+    background-color: #2d5dcc;
+    color: white;
+}
+
+#pink {
+    background-color: #d957d9;
+}
+
+#mint_green {
+    background-color: #4fe0b0;
+}
+
+#beige {
+    background-color: #efd9ca;
 }
 
 span {
-    font-weight: bold;
-    color: blue;
+    font-weight: 800;
+    font-size: 20px;
+    text-decoration: underline 2px;
 }
 
-.product {
-    margin-bottom: 40px;
+#source_code_font, #source_code_text {
+    font-family: "source code pro", sans-serif;
 }
 
-h2 {
-    font-size: 32px;
-    color: white;
-    margin-bottom: 20px;
+#nunito_font, #nunito_text {
+    font-family: "nunito sans", sans-serif;
 }
 
-#brush_banner {
-    background-color: mediumspringgreen;
+#poppins_font, #poppins_text {
+    font-family: poppins, sans-serif;
 }
 
-#frame_banner {
-    background-color: lightcoral;
+.colors, .fonts, .texts {
+    width: 400px;
+    border: dotted 1px rgb(200, 50, 50);
+    background-color: cornsilk;
+    padding: 20px 30px;
 }
-
-#paint_banner {
-    background-color: skyblue;
-}
-
-/*
-This is not part of the code or instructions for this project but merely for future reference...the code below will include all of the border, width, and height calculations into whatever size value you give a CSS element.  For example, if you give an element a height and width of 200px, all of the content, padding and border specs will be included in that value of 200px so that when you are trying to fit different elements together you can get an exact measurement of all the elements so that you can fit them in together precisely.
-
-The default is that when you give an element a value of 200px, 200px will only be the size of the content which will not include any padding or border sizes that you may want to add to the element.
-
-element {
-    box-sizing: border-box;
-}
-*/

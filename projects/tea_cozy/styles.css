@@ -1,0 +1,174 @@
+/******************** GLOBAL RULES ********************/
+body {
+    margin: 30px auto;
+    width: 1300px;
+    min-width: 700px;
+    font-family: Helvetica, sans-serif;
+    font-size: 22px;
+    color: seashell;
+    background-color: black;
+}
+
+h4 a:link, h4 a:visited {
+    color: seashell;
+    transition: ease-out 0.3s;
+}
+
+h4 a:hover {
+    color: rgb(255, 200, 161);
+    font-size: 24px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+h2, h3, h4, h5 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+h5 a:link, h5 a:visited {
+    color: seashell;
+    transition: ease-out 0.3s;
+}
+
+h5 a:hover {
+    color: rgb(255, 200, 161);
+    font-size: 20px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+h2, h3, h4, h5 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+
+/******************** HEADER ********************/
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px;
+    height: 70px;
+    border-bottom: 1px solid seashell;
+}
+
+#logo img {
+    height: 50px;
+    /*border: solid 1px white;*/
+    padding: 5px;
+    transition: ease-out 0.3s;
+}
+
+#logo img:hover {
+    height: 54px;
+    box-shadow: 0 0 10px rgb(255, 200, 161);
+    transition: 0.2s;
+}
+
+nav {
+    width: 400px;
+}
+
+ul {
+    display: flex;
+    margin: auto;
+    padding: 0;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+
+/******************** MAIN ********************/
+.jumbotron {
+    display: flex;
+    margin: 0 auto;
+    width: 1200px;
+    height: 700px;
+    background-image: url(images/mission_background.jpg);
+    background-repeat: no-repeat;
+}
+
+.tea_of_month, .cozy_locations {
+    margin: 0 auto;
+    padding-top: 50px;
+    width: 1200px;
+    height: 700px;
+}
+
+.cozy_locations {
+    height: 500px;
+    /*This is to override the 700px height in ruleset above*/
+}
+
+.cozy_locations {
+    background-image: url(images/locations_background.jpg);
+    background-repeat: no-repeat;
+}
+
+.mission_banner {
+    align-self: center;
+}
+
+.mission_banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    width: 1200px;
+    height: 100px;
+}
+
+.tea_container, .location_container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 15px auto;
+    width: 1100px;
+}
+
+.tea {
+    margin: 10px;
+    width: 300px;
+}
+
+.tea img {
+    width: 300px;
+    height: 200px;
+}
+
+.location_banner {
+    /*top: 2px;*/
+
+}
+
+.location {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    margin: 15px 20px;
+    box-sizing: border-box;
+    width: 300px;
+    height: 300px;
+    padding: 15px 0;
+    background-color: black;
+}
+
+
+/******************** FOOTER ********************/
+.cozy_foot {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    height: 200px;
+}
+
+.copyright {
+    margin-left: 20px;
+}
+
+.copyright h5 {
+    text-align: left;
+}

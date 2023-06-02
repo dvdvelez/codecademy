@@ -9,38 +9,26 @@ body {
     background-color: black;
 }
 
-h4 a:link, h4 a:visited {
+h2, h3, h4, h5 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+h4 a:link, h4 a:visited, h5 a:link, h5 a:visited {
     color: seashell;
     transition: ease-out 0.3s;
 }
 
-h4 a:hover {
+h4 a:hover, h5 a:hover {
     color: rgb(255, 200, 161);
     font-size: 24px;
     transition: 0.2s;
     cursor: pointer;
 }
 
-h2, h3, h4, h5 {
-    text-align: center;
-    margin: 10px 0;
-}
-
-h5 a:link, h5 a:visited {
-    color: seashell;
-    transition: ease-out 0.3s;
-}
-
 h5 a:hover {
-    color: rgb(255, 200, 161);
+    /*This overrides font-size ruleset above for h5*/
     font-size: 20px;
-    transition: 0.2s;
-    cursor: pointer;
-}
-
-h2, h3, h4, h5 {
-    text-align: center;
-    margin: 10px 0;
 }
 
 
@@ -108,13 +96,10 @@ ul {
 }
 
 .mission_banner {
-    align-self: center;
-}
-
-.mission_banner {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-self: center;
     background-color: black;
     width: 1200px;
     height: 100px;

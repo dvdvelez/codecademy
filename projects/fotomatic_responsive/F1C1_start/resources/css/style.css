@@ -113,7 +113,7 @@ li {
 
 .desktop_menu img {
   width: 1rem;
-  padding-left: 1rem;
+  padding-left: 0.25rem;
 }
 
 #fotomatic_mobile {
@@ -331,10 +331,6 @@ main {
     padding-left: 0;
   }
 
-  .desktop_menu img {
-    padding-left: 0.5rem;
-  }
-
   .desktop_menu li:last-child {
     display: block;
   }
@@ -432,7 +428,7 @@ main {
 
   .mobile_menu img {
     width: 1rem;
-    padding-left: 0.5rem;
+    padding-left: 0.25rem;
   }
 
   main {

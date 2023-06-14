@@ -1,0 +1,511 @@
+/*************** GLOBAL RULES ***************/
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+}
+
+a:link, a:visited, a:active {
+  color: #4a4a4a;
+  text-decoration: none;
+  transition: ease-out 0.4s;
+}
+
+a:hover {
+  cursor: pointer;
+  font-weight: 900;
+  color: #9dc20a;
+  text-shadow: 0 0 1px #62d900;
+  transition: 0.2s;
+}
+
+h1, h2, h3, h4, h5, span {
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 3.125rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: 0.75rem;
+}
+
+span {
+  font-size: 1.25rem;
+}
+
+.filter_section, .gallery_section, .quote_section, .footer_section {
+  display: flex;
+  justify-items:center;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  padding: 3.75rem;
+}
+
+.lens_text, .gallery_text {
+  align-self: center;
+  box-sizing: border-box;
+  min-height: 6.25rem;
+  margin: 0 auto;
+}
+
+.lens_text h2, .gallery_text h2 {
+  font-weight: 900;
+  margin-bottom: 0.625rem;
+}
+
+
+/*************** HEADER ***************/
+
+header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 1.875rem;
+  width: 100%;
+  height: 5.3125rem;
+  border-bottom: solid 0.0625rem #c6c1c1;
+  background-color: white;
+  z-index: 1;
+}
+
+#fotomatic_logo {
+  font-size: 1.5rem;
+  font-family: "Roboto Mono", sans-serif;
+}
+
+.desktop_menu ul {
+  display: flex;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  font-family: Roboto, sans-serif;
+  list-style: none;
+  padding-left: 3rem;
+}
+
+.desktop_menu img {
+  width: 1rem;
+  padding-left: 1rem;
+}
+
+#fotomatic_mobile {
+  display: none;
+}
+
+.mobile_menu  {
+  display: none;
+}
+
+.desktop_menu li:last-child {
+  display: none;
+}
+
+
+/*************** MAIN CONTENT ***************/
+main {
+  position: relative;
+  top: 4.8125rem;
+  width: 100%;
+}
+
+/***** Banner Section *****/
+.banner_section {
+  background-image: url(../images/banner-landingpage.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  padding: 10.625rem 12.5rem;
+}
+
+.join_container {
+  display: flex;
+  justify-content: center;
+  background-color: #9dc20a;
+  border: 0.0625rem solid #979797;
+  border-radius: 0.25rem;
+  width: 37.5rem;
+  height: 22.5rem;
+}
+
+.join_center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 26rem;
+  margin: 1.875rem 3.75rem 1.875rem 3.75rem;
+}
+
+.join_center h2 {
+  font-family: Damion;
+  margin-bottom: 0.75rem;
+}
+
+.join_center h1 {
+  font-family: Rubik, sans-serif;
+  margin-bottom: 0.75rem;
+}
+
+.join_center h3 {
+  margin-bottom: 1.625rem;
+}
+
+.button_container {
+  display: flex;
+  justify-content: center;
+}
+
+.banner_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22.5rem;
+  height: 4.375rem;
+  border-radius: 0.25rem;
+  background-color: #4a4a4a;
+  color: white;
+}
+
+.banner_button span a {
+  font-weight: 700;
+  color: white;
+}
+
+/***** Filters Section *****/
+.filter_section {
+  background-color:#f3f3f3;
+}
+
+.lens_container_1, .lens_container_2 {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  margin: 0 1.5625rem;
+  padding: 2.5rem 1.25rem 2.5rem 1.25rem;
+  background-color: white;
+}
+
+.lens_container_1 img, .lens_container_2 img {
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.lens_text {
+  width: 90%;
+  padding-top: 2.5rem;
+}
+
+.lens_text h2, .lens_text h4 {
+  color: #4a4a4a;
+}
+
+/***** Gallery Section *****/
+.gallery_section {
+  flex-direction: column;
+  background-color: #4a4a4a;
+}
+
+.gallery_text {
+  padding-bottom: 2.5rem;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  justify-self: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  padding: 0 1.5625rem;
+}
+
+.gallery img {
+  width: 25%;
+  height: auto;
+}
+
+/***** Quote Section *****/
+
+.quote_section {
+  justify-content: center;
+  background-color: #f3f3f3;
+}
+
+.quote_section h2 {
+  font-style: italic;
+  font-family: Palatino;
+  font-size: 2rem;
+  color: #4a4a4a;
+  margin-right: 2.5rem;
+}
+
+.quote_section img {
+  align-self: center;
+  height: 1.875rem;
+}
+
+/***** Footer Section *****/
+.footer_section {
+  position: relative;
+  top: 4.8125rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  justify-content: space-between;
+  background-color: #9b9b9b;
+}
+
+
+/*************** MEDIA QUERIES ***************/
+
+/***** Width @ 1000px *****/
+@media only screen and (max-width: 1000px) {
+  .banner_section {
+    padding: 10.625rem 0;
+  }
+
+  li {
+    padding-left: 2rem;
+  }
+
+  .join_container {
+    margin: auto;
+  }
+}
+
+/***** Width @ 768px *****/
+@media only screen and (max-width: 768px) {
+  .filter_section, .gallery_section, .quote_section, .footer_section {
+    padding: 1rem;
+  }
+  
+  header {
+    flex-direction: column;
+    padding: 1rem 1rem 0 1rem;
+    height: auto;
+  }
+
+  .desktop_menu {
+    width: 100%;
+  }
+
+  ul {
+    justify-content: space-between;
+    padding: 0;
+    /* by default ul has left padding...must put padding at 0 */
+  }
+
+  li {
+    padding-left: 0;
+  }
+
+  .desktop_menu img {
+    padding-left: 0.5rem;
+  }
+
+  .desktop_menu li:last-child {
+    display: block;
+  }
+
+  .menu_button {
+    background-color: #9dc20a;
+    border: 0.0625rem solid #979797;
+    border-radius: 0.25rem;
+    padding: 0.1875rem 0.5rem;
+  }
+
+  .menu_button span a {
+    font-size: 1rem;
+    color: white;
+  }
+
+  main {
+    top: 6.875rem;
+  }
+
+  .banner_section {
+    padding: 10.625rem 1rem;
+  }
+
+  .join_container {
+    background-color: rgba(157, 194, 10, 0.7);
+    width: 85%;
+    height: auto;
+  }
+
+  .banner_button {
+    display: none;
+  }
+
+  .lens_container_1, .lens_container_2 {
+    margin: 0 0.5rem;
+  }
+
+  .footer_section {
+    top: 6.875rem;  
+  }
+}
+
+/***** Width @ 500px *****/
+@media only screen and (max-width: 500px) {
+  h1 {
+    font-size: 1.5625rem;
+  }
+  
+  h2 {
+    font-size: 1.25rem;
+  }
+  
+  h3 {
+    font-size: 1.125rem;
+  }
+  
+  h4 {
+    font-size: 1rem;
+  }
+
+  h5 {
+    font-size: 0.625rem;
+  }
+  
+  span {
+    font-size: 1.125rem;
+  }
+
+  .filter_section, .gallery_section, .quote_section, .footer_section {
+    padding: 0;
+  }
+
+  header {
+    padding: 0.5rem 0.5rem 0 0.5rem;
+  }
+
+  #fotomatic_logo {
+    display: none;
+  }
+
+  .desktop_menu {
+    display: none;
+  }
+
+  .mobile_menu {
+    display: block;
+    width: 100%;
+  }
+
+  .mobile_menu ul {
+    display: flex;
+    justify-content:space-between;
+  }
+
+  .mobile_menu img {
+    width: 1rem;
+    padding-left: 0.5rem;
+  }
+
+  main {
+    top: 4.375rem;
+  }
+
+  .banner_section {
+    padding: 1.25rem;
+  }
+
+  .join_container {
+    width: 100%;
+  }
+
+  .join_center {
+    margin: 1rem;
+  }
+
+  .filter_section {
+    display: block;
+  }
+
+  .lens_container_1, .lens_container_2 {
+    margin: 0;
+    padding: 1.25rem;
+  }
+
+  .lens_container_1 {
+    background-color: #9b9b9b;
+  }
+
+  .lens_container_1 h2, .lens_container_1 h4 {
+    color: white;
+  }
+
+  .lens_container_1 img, .lens_container_2 img {
+    width: 99%;
+  }
+
+  .lens_text {
+    width: 99%;
+    padding-top: 1.25rem;
+  }
+
+  .gallery_text {
+    width: 99%;
+    padding: 1.25rem;
+  }
+
+  .gallery {
+    padding: 0;
+  }
+
+  .quote_section {
+    display: block;
+    padding: 1.25rem;
+  }
+
+  .quote_section h2 {
+    margin: 0;
+    padding-bottom: 1rem;
+    font-size: 1.25rem;
+  }
+
+  .quote_section img {
+    display: flex;
+    justify-self: center;
+    margin: 0 auto;
+    
+  }
+
+  .footer_section {
+    top: 4.375rem;
+    padding: 0.5rem;
+  }
+}

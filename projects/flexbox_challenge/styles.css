@@ -652,7 +652,7 @@ footer {
     }
 
     .product {
-        padding: 0.5rem 0.3125rem;
+        padding: 0.5rem /*0.3125rem*/;
     }
     
     .meet_team {
@@ -691,7 +691,7 @@ footer {
     .contact_us_768 {
         display: block;
         box-sizing: border-box;
-        padding: 2rem;
+        padding: 2rem 0.5rem;
     }
 
     .contact_us_768 h3 {
@@ -700,6 +700,10 @@ footer {
 
     .contact_us_768 h3 a {
         text-decoration: underline;
+    }
+
+    footer {
+        padding: 2rem 0.5rem;
     }
 
             /***** ABOUT US @768px width *****/

@@ -444,6 +444,12 @@ footer {
 }
 
 
+/*************** FORM SUBMISSION ***************/
+.form_submission {
+    padding: 1rem;
+}
+
+
 /*************** MEDIA QUERIES ***************/
 
 /***** @1400px width *****/

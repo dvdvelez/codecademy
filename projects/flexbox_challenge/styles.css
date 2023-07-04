@@ -1,0 +1,749 @@
+/*************** GLOBAL RULES ***************/
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+main, footer {
+    background-color: white;
+}
+  
+a:link, a:visited, a:active, a:link span {
+    color: rgb(70, 40, 0);
+    text-decoration: none;
+    transition: ease-out 0.4s;
+}
+
+a:hover, a:hover span {
+    cursor: pointer;
+    font-weight: 900;
+    text-shadow: 0 0 5px #39e6f2;
+    color: #2cacb5;
+    transition: 0.2s;
+}
+  
+h1, h2, h3, h4, h5, h6, span {
+    font-weight: 600;
+    letter-spacing: 0.125rem;
+    line-height: 150%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: rgb(70, 40, 0);
+}
+  
+h1 {
+    font-size: 3rem;
+}
+  
+h2 {
+    font-size: 2.5rem;
+}
+  
+h3 {
+    font-size: 1.25rem;
+}
+  
+h4 {
+    font-size: 1.125rem;
+}
+  
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 0.875rem;
+}
+  
+span {
+    font-family: "Indie Flower", sans-serif;
+    font-size: 4rem;
+    color: #2cacb5;
+}
+
+sup, sub {
+    font-size: 0.7rem;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.75rem;
+}
+
+nav, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*************** HEADER ***************/
+header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;  /*IMPORTANT!: You must use border box so that when applying padding to the header the content is NOT pushed outside the bounds of the viewport.*/
+    padding: 1rem 2rem;
+    background-color: #fdf1e1;
+    z-index: 1;  /*Z-index specifies what layer the header is in. Since we don't want it to move as you scroll up or down, we want header to be on top of everything else. So index is 1.*/
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+#logo h6 {
+    align-self: baseline;
+    margin-left: -1rem;
+}
+
+#logo_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.5rem;
+    background-color: #ffb79d;
+    border: solid 2px rgb(70, 40, 0);
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    transition: ease-out 0.4s;
+}
+
+#logo_icon:hover {
+    cursor: pointer;
+    border: solid 2px #2cacb5;
+    box-shadow: 0 0 20px #39e6f2;
+    transition: 0.2s;
+}
+
+#logo_icon a {
+    display: flex;
+    justify-content: center;
+}
+
+#logo_icon img {
+    border-radius: 25%;
+    /*This is to round off the corners so that the actual image can be as close to the borders of the logo container as possible. Otherwise, the rectangular corners of the image will overlap and overflow the circular border of the logo_icon container.*/
+    width: 59%;
+}
+
+ul {
+    display: flex;
+    font-family: "Italiana", sans-serif;
+    list-style: none;
+    align-items: center;
+  }
+
+ul li:nth-child(6) {
+    display: none;
+}
+
+li {
+    margin-left: 2rem;
+}
+
+li img {
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: solid 0.1rem rgb(70, 40, 0);
+    box-shadow: 0 0 2px rgb(100, 100, 100);
+    transition: ease-out 0.4s;
+}
+
+li img:hover {
+    cursor: pointer;
+    border: solid 0.1rem #2cacb5;
+    box-shadow: 0 0 5px #39e6f2;
+    transition: 0.2s;
+}
+
+
+/*************** MAIN ***************/
+main {
+    position: relative;
+    top: 8.1875rem;
+    z-index: 0;
+}
+
+/***** banner *****/
+.banner_1024, .banner_768 {
+    display: none;
+}
+
+.banner {
+    display: flex;
+    height: 30rem;
+    justify-content: center;
+    align-items: center;
+    background-image: url(images/yarns/banner_background_7.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.banner h2 {
+    font-family: "Indie Flower", sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.5rem;
+    background-color: #ddfafc;
+    opacity: 0.9;
+    padding: 2rem 6rem;
+    border-radius: 1rem;
+    border: 0.1875rem solid rgb(70, 40, 0);
+}
+
+.banner_text {
+    padding: 2rem 6rem;
+    background-color: #fdf1e1;
+}
+
+/***** product *****/
+.product {
+    box-sizing: border-box;
+    padding: 2rem;
+}
+
+.product h2 {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+.yarn_grid {
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    box-sizing: border-box;
+    padding: 1.5rem;
+}
+
+.yarn_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Leave this here in case you decide to make the yarn images/text a smaller width percentage */
+    border: 0.0625rem solid rgb(70, 40, 0);
+    box-shadow: 0 0 4px rgb(100, 100, 100);
+}
+
+.yarn_container img {
+    width: 100%;
+    height: auto;
+}
+
+.yarn_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Leave this here in case you decide to make the yarn images/text a smaller width percentage */
+    width: 100%;
+    /*height: auto;*/
+    background-color: #fdf1e1;
+}
+
+.yarn_header h3 {
+    box-sizing: border-box;
+    /*width: 100%;*/
+    /*height: auto;*/
+    line-height: 90%;
+    margin: 0.5rem 0;
+    font-family: "Italiana", sans-serif;
+}
+
+.yarn_header h3 span {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.75rem;
+    color: rgb(70, 40, 0);
+}
+
+.yarn_header button {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    border: solid 0.1rem rgb(70, 40, 0);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 2px rgb(100, 100, 100);
+    padding: 0.1rem; /*You need this padding to put a small amount of space between the button's borders and the h4 embedded in it*/
+    margin-bottom: 0.5rem;
+    background-color: #ddfafc;
+    transition: ease-out 0.4s;
+}
+
+.yarn_header button:hover {
+    cursor: pointer;
+    border: solid 0.1rem #2cacb5;
+    box-shadow: 0 0 5px #39e6f2;
+    transition: 0.2s;
+}
+
+.yarn_container h4 {
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem; /*This is the padding WITHIN the h4 element*/
+    background-color: #ddfafc;
+}
+
+.yarn_container h6 {
+    padding: 0.5rem;
+}
+
+.yarn_container h6 span {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.0625rem;
+    color: rgb(70, 40, 0);
+}
+
+/***** the team *****/
+.meet_team {
+    box-sizing: border-box;
+    padding: 2rem;
+    background-color: #ebfbfc;
+}
+
+.meet_team h2 {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+.team_grid {
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+    box-sizing: border-box;
+    padding: 1.5rem;
+}
+
+.team_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Leave this here in case you decide to make the yarn images/text a smaller width percentage */
+    border: 0.0625rem solid rgb(70, 40, 0);
+    box-shadow: 0 0 4px rgb(100, 100, 100);
+    background-color: #fdf1e1;
+}
+
+.team_container img {
+    width: 100%;
+    height: auto;
+}
+
+.team_text {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 0.5rem 0.5rem;
+    color: rgb(70, 40, 0);
+}
+
+.team_text h3 {
+    font-family: "Italiana", sans-serif;
+}
+
+.team_text h6 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+}
+
+.team_text h5 {
+    font-size: 0.9375rem;
+}
+
+.team_text p {
+    border-top: solid 0.05rem rgb(70, 40, 0);
+    padding-top: 0.5rem;
+    height: auto;
+}
+
+.team_text p span {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.5rem;
+    color: rgb(70, 40, 0);
+}
+
+/***** contact us *****/
+.contact_us_768 {
+    display: none;
+}
+
+.contact_us {
+    box-sizing: border-box;
+    padding: 2rem;
+}
+
+.contact_us h6 {
+    margin-bottom: 2rem;
+}
+
+.contact_us h3 a {
+    text-decoration: underline;
+}
+
+.contact_form {
+    /*margin: auto;*/
+    display: flex;
+    justify-content: center;
+}
+
+
+/*************** FOOTER ***************/
+footer {
+    position: relative;
+    top: 8.1875rem;
+    z-index: 0;
+    background-color: #fdf1e1;
+    padding: 3rem 2rem;
+}
+
+
+/*************** ABOUT US ***************/
+.about_us_intro {
+    box-sizing: border-box;
+    padding: 2rem;
+}
+
+.about_us_container_768 {
+    display: none;
+}
+
+.about_us_container {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    margin: 3rem 6rem 7rem 6rem;
+}
+
+.about_us_text {
+    width: 45%;
+    margin: 0 2rem;
+}
+
+.about_us_text h3 {
+    padding-bottom: 1rem;
+    text-decoration: underline;
+}
+
+.about_us_container img {
+    width: 45%;
+    /*height: auto;*/
+}
+
+
+/*************** MEDIA QUERIES ***************/
+
+/***** @1400px width *****/
+@media only screen and (max-width: 1400px) {
+    h1 {
+        font-size: 2rem;
+    }
+      
+    h2 {
+        font-size: 1.5rem;
+    }
+      
+    h3 {
+        font-size: 1rem;
+    }
+      
+    h4 {
+        font-size: 0.9375rem;
+    }
+      
+    h5 {
+        font-size: 0.875rem;
+    }
+    
+    h6 {
+        font-size: 0.8125rem;
+    }
+      
+    span {
+        font-family: "Indie Flower", sans-serif;
+        font-size: 2.5rem;
+        color: #2cacb5;
+    }
+
+    #logo_icon {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    #logo h6 {
+        margin-left: -0.5rem;
+    }
+
+    ul li:nth-child(4) {
+        display: none;
+    }
+
+    main, footer{
+        top: 5.7rem;
+    }
+}
+
+/***** @1024px width *****/
+@media only screen and (max-width: 1024px) {
+    header {
+        flex-direction: column;
+    }
+
+    #logo_icon, li img {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    #logo h6 {
+        margin-left: -1rem;
+    }
+
+    main, footer{
+        top: 8rem;
+    }
+
+    .banner, .banner_text {
+        display: none;
+    }
+
+    .banner_1024 {
+        display: flex;
+        height: 15rem;
+        justify-content: center;
+        align-items: center;
+        background-image: url(images/yarns/banner_background_7.jpeg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .banner_1024 h4 {
+        font-weight: 900;
+        background-color: #ddfafc;
+        opacity: 0.9;
+        margin: 0 2rem;
+        padding: 1rem;
+        border-radius: 1rem;
+        border: 0.15rem solid rgb(70, 40, 0);
+    }
+
+    .yarn_grid, .team_grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+            /***** ABOUT US @1024px width *****/
+            .about_us_container {
+                margin: 2rem 2rem 5rem 2rem;
+            }
+
+            .about_us_text, .about_us_container img {
+                width: 50%;
+            }
+
+            .about_us_text h5 {
+                font-size: 0.8rem;
+            }
+}
+
+/***** @768px width *****/
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+      
+    h2 {
+        font-size:  1.3rem;
+    }
+      
+    h3 {
+        font-size: 0.8rem;
+    }
+      
+    h4 {
+        font-size: 0.7rem;
+    }
+      
+    h5 {
+        font-size: 0.6rem;
+    }
+    
+    h6 {
+        font-size: 0.5rem;
+    }
+
+    p{
+        font-size: 0.5rem;
+    }
+      
+    span {
+        /*font-family: "Indie Flower", sans-serif;*/
+        font-size: 1.6rem;
+        /*color: #2cacb5;*/
+    }
+
+    sup, sub {
+        font-size: 0.5rem;
+    }
+
+    header {
+        padding: 0.5rem 0.5rem;
+    }
+
+    #logo h6 {
+        margin-left: -0.7rem;
+    }
+
+    ul li:nth-child(2) {
+        display: none;
+    }
+
+    ul li:nth-child(5) {
+        display: none;
+    }
+
+    ul li:nth-child(6) {
+        display: flex;
+    }
+
+    li {
+        margin-left: 1.3rem;
+    }
+
+    main, footer{
+        top: 5.7rem;
+    }
+    
+    .banner_1024 {
+        display: none;
+    }
+
+    .banner_768 {
+        display: flex;
+        height: 15rem;
+        justify-content: center;
+        align-items: center;
+        background-image: url(images/yarns/banner_background_7.jpeg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .banner_768 h4 {
+        font-weight: 900;
+        background-color: #ddfafc;
+        opacity: 0.9;
+        margin: 0 2rem;
+        padding: 1rem;
+        border-radius: 1rem;
+        border: 0.15rem solid rgb(70, 40, 0);
+    }
+
+    .product {
+        padding: 0.5rem 0.3125rem;
+    }
+    
+    .meet_team {
+    padding: 0.5rem;
+    }
+
+    .yarn_grid, .team_grid {
+        gap: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .yarn_header h3 span, .yarn_container h6 span {
+        font-size: 0.65rem;
+    }
+
+    .yarn_header button h4 {
+        font-size: 0.6rem;
+    }
+
+    .team_text h5 {
+        font-size: 0.6rem;
+    }
+
+    .team_text h6 {
+        font-size: 0.5rem;
+    }
+
+    .team_text h5, .team_text h6 {
+        margin-top: 0.4rem;
+    }
+
+    .contact_us {
+        display: none;
+    }
+
+    .contact_us_768 {
+        display: block;
+        box-sizing: border-box;
+        padding: 2rem;
+    }
+
+    .contact_us_768 h3 {
+        margin-bottom: 2rem;
+    }
+
+    .contact_us_768 h3 a {
+        text-decoration: underline;
+    }
+
+            /***** ABOUT US @768px width *****/
+            .about_us_container, .about_us_container_768 {
+                display: block;
+                /*justify-content: center;*/
+                box-sizing: border-box;
+                margin: 2rem 2rem 4rem 2rem;
+            }
+
+            .about_us_2nd {
+                display: none;
+            }
+
+            .about_us_text, .about_us_container img, .about_us_container_768 img {
+                width: 100%;
+            }
+
+            .about_us_text {
+                margin: 0;
+                padding-bottom: 1rem;
+            }
+}
+
+/***** @426px width *****/
+@media only screen and (max-width: 426px) {
+    .yarn_grid, .team_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+            /***** ABOUT US @426px width *****/
+            .about_us_intro h2 {
+                font-size: 1.3rem;
+            }
+
+            .about_us_intro h4 {
+                font-size: 0.7rem;
+            }
+            
+            .about_us_text h3 {
+                font-size: 0.8rem;
+            }
+
+            .about_us_text h5 {
+                font-size: 0.6rem;
+            }
+}
